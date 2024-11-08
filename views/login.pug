@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Login - NewsPulse
+    link(rel="stylesheet" href="/styles.css")
+  body
+    header
+      nav
+        .logo NewsPulse
+        ul.nav-menu
+          li: a(href="/") Home
+          li: a(href="/register") Register
+          li: a(href="/login") Login
+          li: a(href="/dashboard") Dashboard
+          li: a(href="/about") About Us
+    main
+      section.form-section
+        h1 Login
+        form#loginForm(action="/auth/login", method="POST")
+          fieldset
+            legend Login to NewsPulse
+            label(for="loginemail") Email:
+            input(type="email" id="loginemail" name="loginemail" required)
+            .error-message
+            label(for="loginpassword") Password:
+            input(type="password" id="loginpassword" name="loginpassword" required)
+            button.btn(type="submit") Login
+        #successMessage
+    footer
+      p &copy; 2024 NewsPulse. All rights reserved.
+    script(src="/script.js")

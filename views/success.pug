@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title NewsPulse - Home
+    link(rel="stylesheet" href="/styles.css")
+  body
+    header
+      nav
+        .logo NewsPulse
+        ul.nav-menu
+          li: a(href="/") Home
+          li: a(href="/register") Register
+          li: a(href="/login") Login
+          li: a(href="/dashboard") Dashboard
+          li: a(href="/about") About Us
+    main
+        h1 Welcome to News Pulse!
+        p You have successfully logged in.
+            section.api-news
+        h2 Latest News from APIs
+        h3 News Headlines (NewsAPI)
+        #news-container
+          p Loading news articles...
+        h3 Sentiment Analysis (TextRazor)
+        #sentiment-container
+          p Sentiment analysis will appear here.
+
+        button.btn#load-news Load New News
+    footer
+      p &copy; 2024 NewsPulse. All rights reserved.
+    script(src="/script.js")
